@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  cpf: MyString
+  total_loans: 1.5
+  quantity_quotas: 1
+  quota_value: 1.5
+
+two:
+  name: MyString
+  cpf: MyString
+  total_loans: 1.5
+  quantity_quotas: 1
+  quota_value: 1.5
