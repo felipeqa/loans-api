@@ -6,13 +6,14 @@ class UsersController < ApplicationController
 
   # Should work if the current_user is authenticated.
   def index
-    render json: {status: 200, msg: 'Logged-in'}
+    users = User.order('created_at DESC')
+    render json: {status: 200, msg: 'All users list', data: users }
   end
 
   # Method to create a new user using the safe params we setup.
   def create
     user = User.new(user_params)
-    render json: { status: 200, msg: 'User was created.' } if user.save
+    render json: { status: 200, msg: 'User was created.', data: "User Id #{user.id}" } if user.save
   end
 
   # Method to update a specific user. User will need to be authorized.
