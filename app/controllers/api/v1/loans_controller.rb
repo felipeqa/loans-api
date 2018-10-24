@@ -19,8 +19,8 @@ module Api
 
       def create
         loan = Loan.new(loan_params)
+        loan.quota_value = loan.total_loans / loan.quantity_quotas
         if loan.save
-          loan.quota_value = loan.total_loans / loan.quantity_quotas
           render json: {
             status: 'SUCCESS', message: 'Saved loan', data: loan
           }, status: :ok
