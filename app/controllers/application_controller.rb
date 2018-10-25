@@ -9,7 +9,7 @@ class ApplicationController < ActionController::API
     if current_user.nil?
       head :unauthorized
     elsif !current_user.is_admin?
-      render json: { status: 200, msg: 'You do not have permission to delete a user' }
+      render json: { status: 200, msg: 'You do not have permission to delete this!!!' }
     end
   end
 end

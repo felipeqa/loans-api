@@ -2,6 +2,7 @@ module Api
   module V1
     class LoansController < ApplicationController
       before_action :authenticate_user
+      before_action :authorize_as_admin, only: [:destroy]
 
       def index
         loans = Loan.order('created_at DESC')
