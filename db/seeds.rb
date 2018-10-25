@@ -18,3 +18,10 @@
     quota_value: quota_value
   )
 end
+
+User.create(
+  email: 'admin@admin.com',
+  password: 'password',
+  username: 'ADMIN',
+  role: 'admin'
+)
