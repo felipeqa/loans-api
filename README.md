@@ -269,6 +269,12 @@ Body:
  }
 ```
 
+|HTTP: Status   |
+|---|
+|200|
+|401|
+|404|
+
 * *DELETE* /user/:id **(Necessita autenticação)**
 
 Esse endpoint é responsável por fazer deletar um usuário com base no seu id
@@ -284,6 +290,12 @@ Usar o header:
 "Authorization": "Bearer ${token_jwt_gerado}"
 ```
 
+|HTTP: Status   |
+|---|
+|200|
+|401|
+|404|
+
 * *GET*  /api/v1/loans **(Necessita autenticação)**
 
 Esse endpoint é responsável por listar todos os empréstimos existentes de todos os cliente
@@ -293,6 +305,11 @@ Usar o header:
 ```json
 "Authorization": "Bearer ${token_jwt_gerado}"
 ```
+
+|HTTP: Status   |
+|---|
+|200|
+|401|
 
 * *POST*  /api/v1/loans **(Necessita autenticação)**
 
@@ -318,6 +335,11 @@ Body:
  }
 ```
 
+|HTTP: Status   |
+|---|
+|200|
+|401|
+
 * *GET*  /api/v1/loans/:id **(Necessita autenticação)**
 
 Esse endpoint recuperar um empréstimo dado o seu id
@@ -327,6 +349,12 @@ Usar o header:
 ```json
 "Authorization": "Bearer ${token_jwt_gerado}"
 ```
+
+|HTTP: Status   |
+|---|
+|200|
+|401|
+|404|
 
 * *DEL*  /api/v1/loans/:id **(Necessita autenticação)**
 
@@ -339,6 +367,12 @@ Usar o header:
 ```json
 "Authorization": "Bearer ${token_jwt_gerado}"
 ```
+
+|HTTP: Status   |
+|---|
+|200|
+|401|
+|404|
 
 Então galera é isso!
 
