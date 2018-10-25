@@ -382,7 +382,7 @@ Vou criar um novo projeto mostranto como eu faria estes testes, esse aqui é ape
 
 O intuíto é fornecer essa api como interface para testes, se vc quiser um ambiente mais reservado, faça o clone do projeto e suba a aplicação com o docker, se vc quer apenas fazer algumas brincadeira e talz use a de produção mesmo.
 
-Agora escolha seu framework favorita e mão-na-massa.
+Agora escolha seu framework favorito e mão-na-massa.
 
 Até o próximo!!!!!
 
