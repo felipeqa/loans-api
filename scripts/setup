@@ -1,0 +1,4 @@
+#!/bin/sh
+# setup: used to set up a project in an initial state.
+docker build -t loan-api/rails .
+docker run -p 3000:3000 loan-api/rails
