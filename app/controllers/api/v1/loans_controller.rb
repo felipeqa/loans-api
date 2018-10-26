@@ -20,6 +20,7 @@ module Api
 
       def create
         loan = Loan.new(loan_params)
+        not_be_blank(loan)
         loan.quota_value = (loan.total_loans / loan.quantity_quotas).round(2)
         if loan.save
           render json: {
@@ -44,6 +45,14 @@ module Api
 
       def loan_params
         params.permit(:name, :cpf, :total_loans, :quantity_quotas)
+      end
+
+      def not_be_blank(loan)
+        if loan.total_loans.nil?
+          loan.total_loans = 0
+        elsif loan.quantity_quotas.nil?
+          loan.quantity_quotas = 0
+        end
       end
     end
   end
